@@ -1,1 +1,11 @@
 /backend/node_modules/
+/frontend/.gitignore
+/frontend/README.md
+/frontend/package-lock.json
+/frontend/package.json
+/frontend/public/favicon.ico
+/frontend/public/logo192.png
+/frontend/public/logo512.png
+/frontend/public/manifest.json
+/frontend/public/robots.txt
+/frontend/src/components/post.js

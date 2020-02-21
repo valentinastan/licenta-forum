@@ -1,4 +1,6 @@
 const express = require('express');
+const postsRoutes = require('./routes/posts')
+const commentsRoutes = require('./routes/comments')
 const app = express();
 const morgan = require('./config/morgan')
 
@@ -12,5 +14,9 @@ app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Headers', '*');
   next();
 })
+
+app.use('/api', commentsRoutes)
+app.use('/api', postsRoutes)
+
 
 app.listen(2222)
