@@ -1,8 +1,10 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import Post from './post'
 import {useDispatch, useState} from '../state-management/stores/store'
 import {getPostsRequest} from '../requests/posts'
 import CreateComment from './createComment'
+
 
 const Posts = () => {
   // const posts = [
@@ -34,7 +36,7 @@ const Posts = () => {
 
   const dispatch = useDispatch()
   const posts = useState().postState.posts
-  console.log(posts)
+  //console.log(posts)
 
   React.useEffect(() => {
     const postsPromise = getPostsRequest()
@@ -49,6 +51,7 @@ const Posts = () => {
       <h3>Titlu Lista Posturi</h3>
       {(posts || []).map((el) => <Post key={`post_${el.id}`} {...el}></Post>) }
       <CreateComment id={1}></CreateComment>
+      {/* <Link to={'/test'}> teesstt </Link> */}
     </React.Fragment>
   )
 }

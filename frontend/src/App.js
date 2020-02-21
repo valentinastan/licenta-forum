@@ -4,7 +4,9 @@ import Forum from './components/forum'
 
 function App() {
   return (
-  <Forum />
+    <React.Fragment>
+      <Forum />
+    </React.Fragment>
   );
 }
 
