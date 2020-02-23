@@ -9,12 +9,11 @@ exports.index = async (req, res, next) => {
 
 exports.create = async (req, res, next) => {
   const {
-    userId,
     title,
     text,
   } = req.body
 
-  const post = await Post.create({userId, title, text})
+  const post = await Post.create({userId: 1, title, text})
 
   res.status(200).json(post)
 }
