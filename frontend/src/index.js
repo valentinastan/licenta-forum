@@ -4,11 +4,15 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import {StateProvider} from './state-management/stores/store'
+import { HashRouter } from 'react-router-dom'
 
 ReactDOM.render(
-<StateProvider> 
-  <App />
-</StateProvider>, document.getElementById('root'));
+  <HashRouter>
+    <StateProvider> 
+      <App />
+    </StateProvider>
+</HashRouter>
+, document.getElementById('root'));
 
 
 serviceWorker.unregister();

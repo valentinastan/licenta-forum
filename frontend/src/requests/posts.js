@@ -6,6 +6,12 @@ export async function getPostsRequest() {
   return posts.data
 }
 
+export async function getOnePostRequest(id) {
+  let postWithComments = await get(`api/posts/${id}`)
+
+  return postWithComments.data
+}
+
 export async function postPostRequest(params) {
   let newPost = await post('api/post', params)
 

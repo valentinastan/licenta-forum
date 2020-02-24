@@ -5,8 +5,8 @@ import { postPostRequest } from '../requests/posts'
 const CreatePost = () => {
 
   const [state, setState] = useState({
-    titlePost: 'Without title',
-    textPost: 'Without text'
+    titlePost: '',
+    textPost: ''
   })
   const dispatch = useDispatch()
 
@@ -23,9 +23,7 @@ const CreatePost = () => {
   return(
     <React.Fragment>
       <textarea id="newTitle" rows="1.5" cols="30" onChange={(event) => setState({titlePost: event.target.value})}></textarea> <br/>
-      <textarea id="newText" rows="3" cols="30" onChange={(event) => setState({...state, textPost: event.target.value})}></textarea>
-      <div>{state.titlePost}</div>
-      <div>{state.textPost}</div>
+      <textarea id="newText" rows="3" cols="30" onChange={(event) => setState({...state, textPost: event.target.value})}></textarea> <br/>
       <button type='button' onClick={sendPost}>Button create new POST</button>
     </React.Fragment>
   )

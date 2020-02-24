@@ -5,8 +5,7 @@ import Comments from './comments'
 const Forum = () => {
   return(
       <React.Fragment>
-        <Posts></Posts>
-        <Comments></Comments>
+        <Posts/>
       </React.Fragment>
     )
   }

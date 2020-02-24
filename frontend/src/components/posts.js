@@ -2,8 +2,8 @@ import React from 'react'
 import Post from './post'
 import {useDispatch, useState} from '../state-management/stores/store'
 import {getPostsRequest} from '../requests/posts'
-import CreateComment from './createComment'
 import CreatePost from './createPost'
+import PreviewPost from './previewPost'
 
 
 const Posts = () => {
@@ -29,9 +29,8 @@ const Posts = () => {
   return(
     <React.Fragment>
       <h3>Titlu Lista Posturi</h3>
-      <CreatePost></CreatePost><br/>
-      {(posts || []).map((el) => <Post key={`post_${el.id}`} {...el}></Post>) }
-      <CreateComment id={1}></CreateComment>
+      <CreatePost></CreatePost> <br/>
+      {(posts || []).map((el) => <PreviewPost key={`post_${el.id}`} {...el}></PreviewPost>) }
     </React.Fragment>
   )
 }
