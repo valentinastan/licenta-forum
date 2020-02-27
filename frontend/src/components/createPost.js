@@ -8,6 +8,7 @@ const CreatePost = () => {
     titlePost: '',
     textPost: ''
   })
+  
   const dispatch = useDispatch()
 
   const sendPost = () => {
@@ -22,7 +23,9 @@ const CreatePost = () => {
 
   return(
     <React.Fragment>
-      <textarea id="newTitle" rows="1.5" cols="30" onChange={(event) => setState({titlePost: event.target.value})}></textarea> <br/>
+      <h1>{state.titlePost}</h1>
+      <h1>{state.textPost}</h1>
+      <textarea id="newTitle" rows="1.5" cols="30" onChange={(event) => setState({...state, titlePost: event.target.value})}></textarea> <br/>
       <textarea id="newText" rows="3" cols="30" onChange={(event) => setState({...state, textPost: event.target.value})}></textarea> <br/>
       <button type='button' onClick={sendPost}>Button create new POST</button>
     </React.Fragment>

@@ -6,7 +6,7 @@ export default function postReducer(state, action) {
       return {...state}
     case 'NEW_POST':
       state.posts.push(action.post)
-      console.log('state din reducer: ', state)
+     
       return {...state}
     default:
 

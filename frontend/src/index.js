@@ -11,8 +11,6 @@ ReactDOM.render(
     <StateProvider> 
       <App />
     </StateProvider>
-</HashRouter>
-, document.getElementById('root'));
-
+  </HashRouter>,document.getElementById('root'));
 
 serviceWorker.unregister();

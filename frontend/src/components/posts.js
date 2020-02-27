@@ -1,5 +1,4 @@
 import React from 'react'
-import Post from './post'
 import {useDispatch, useState} from '../state-management/stores/store'
 import {getPostsRequest} from '../requests/posts'
 import CreatePost from './createPost'

@@ -19,7 +19,6 @@ console.log('comments: ' , comments)
   return (
     <React.Fragment>
       <h2>Comentarii:</h2>
-      
       {(comments || []).map((el) => <Comment key={`comment_${el.id}`} {...el}></Comment>) }
     </React.Fragment>
   )
