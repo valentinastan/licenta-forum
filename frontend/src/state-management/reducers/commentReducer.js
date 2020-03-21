@@ -1,7 +1,8 @@
 export default function commentReducer(state, action) {
   switch(action.type) {
     case 'NEW_COMMENT':
-      state.comments.push(action.comment)
+      console.log('DISPATCHING')
+      state.comments = [...state.comments, action.comment]
 
       return {...state}
     case 'GET_COMMENTS':

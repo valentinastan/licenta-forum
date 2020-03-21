@@ -8,6 +8,7 @@ module.exports = (sequelize, DataTypes) => {
     User.hasMany(models.Post);
     User.hasMany(models.Notification);
     User.hasMany(models.Comment);
+    User.hasMany(models.Reaction);
   };
   return User;
 };

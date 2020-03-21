@@ -10,6 +10,7 @@ module.exports = (sequelize, DataTypes) => {
   Comment.associate = function(models) {
     Comment.belongsTo(models.User);
     Comment.belongsTo(models.Post);
+    Comment.belongsTo(models.Reaction);
   };
   return Comment;
 };
