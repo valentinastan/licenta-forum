@@ -4,7 +4,6 @@ import { useDispatch } from '../state-management/stores/store'
 
 const CreateComment = (props) => {
   const [state, setState] = useState('');
-  //console.log('props' , props)
   const dispatch = useDispatch()
 
   const sendComment = () => {

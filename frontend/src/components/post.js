@@ -24,10 +24,9 @@ const Post = (props) => {
   return(
     <React.Fragment>
       <div className='post'>
-        <h2>Titlu post:{state.title}</h2>
-        <div>Text post:{state.text}</div>
+        <h2>{state.title}</h2>
+        <div>{state.text}</div>
       </div>
-        <p>Comments:</p>
         {(globalState.commentState.comments || []).map((el) => <Comment key={`comment_${el.id}`} {...el}></Comment>) }
         <br/>
       <CreateComment id={props.match.params.id}></CreateComment>

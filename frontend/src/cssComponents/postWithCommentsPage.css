@@ -11,8 +11,12 @@
 
 .post, .comment div {
     text-align: justify;
-    padding: 2%;
+    padding: 3%;
     color:#FFECB3;
+}
+
+.comment div {
+    padding: 1%;
 }
 
 p {
