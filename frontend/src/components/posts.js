@@ -27,9 +27,11 @@ const Posts = () => {
 
   return(
     <React.Fragment>
-      <h3>Titlu Lista Posturi</h3>
-      <CreatePost></CreatePost> <br/>
-      {(posts || []).map((el) => <PreviewPost key={`post_${el.id}`} {...el}></PreviewPost>) }
+      <h1>Forumul agricultorului</h1>
+      <CreatePost></CreatePost>
+      <div className='posts'>
+        {(posts || []).map((el) => <PreviewPost key={`post_${el.id}`} {...el}></PreviewPost>) }
+      </div>
     </React.Fragment>
   )
 }

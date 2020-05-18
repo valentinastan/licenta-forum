@@ -3,9 +3,11 @@ import Posts from './posts'
 
 const Forum = () => {
   return(
-    <React.Fragment>
-      <Posts/>
-    </React.Fragment>
+    <div className="forum">
+      <React.Fragment>
+        <Posts/>
+      </React.Fragment>
+    </div>
   )
 }
 

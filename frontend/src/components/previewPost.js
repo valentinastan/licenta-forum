@@ -5,10 +5,11 @@ const PreviewPost = (props) => {
   
   return(
     <React.Fragment>
-      <div>Titlu post: {props.title}</div>
-      <div>Text post:{props.text}</div>
-      <Link to={`/test/${props.id}`}>Show More</Link>
-      <br/>
+      <div className='previewPost'>
+        <div>Titlu post: {props.title}</div>
+        <div>Text post:{props.text}</div>
+        <Link to={`/test/${props.id}`}>Show More</Link>
+      </div>
     </React.Fragment>
   )
 }

@@ -19,9 +19,12 @@ const CreateComment = (props) => {
 
   return (
     <React.Fragment>
-    <textarea id="newComment" rows="3" cols="30" onChange={(event) => setState(event.target.value)}></textarea>
-    <h1>{state}</h1>
-    <button type='button' onClick={sendComment}>Button create comment</button>
+      <div className='createComment'>
+        <div>Comentariu nou</div>
+        <textarea id="newComment" rows="4" cols="30" onChange={(event) => setState(event.target.value)}></textarea><br></br>
+        {/* <h1>{state}</h1> */}
+        <button type='button' onClick={sendComment}>Adauga</button>
+      </div>
     </React.Fragment>
   )
 }

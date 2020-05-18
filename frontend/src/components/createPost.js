@@ -23,11 +23,13 @@ const CreatePost = () => {
 
   return(
     <React.Fragment>
-      <h1>{state.titlePost}</h1>
-      <h1>{state.textPost}</h1>
-      <textarea id="newTitle" rows="1.5" cols="30" onChange={(event) => setState({...state, titlePost: event.target.value})}></textarea> <br/>
-      <textarea id="newText" rows="3" cols="30" onChange={(event) => setState({...state, textPost: event.target.value})}></textarea> <br/>
-      <button type='button' onClick={sendPost}>Button create new POST</button>
+      <div className='createPost'>
+        <div>Introduceti titlul</div>
+        <textarea id="newTitle" rows="2" cols="30" onChange={(event) => setState({...state, titlePost: event.target.value})}></textarea> <br/>
+        <div>Introduceti textul</div>
+        <textarea id="newText" rows="4" cols="30" onChange={(event) => setState({...state, textPost: event.target.value})}></textarea> <br/>
+        <button type='button' onClick={sendPost}>Adauga</button>
+      </div>
     </React.Fragment>
   )
 }
