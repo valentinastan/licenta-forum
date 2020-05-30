@@ -1,4 +1,5 @@
 export default function commentReducer(state, action) {
+  let comment
   switch(action.type) {
     case 'NEW_COMMENT':
       console.log('DISPATCHING')
@@ -7,6 +8,12 @@ export default function commentReducer(state, action) {
       return {...state}
     case 'GET_COMMENTS':
       state.comments = action.comments
+
+      return {...state}
+    case 'UPDATE_COMMENT':
+      comment = state.comments.find((el) => el.id === action.comment.id)
+      comment.likes = action.comment.likes
+      comment.dislikes = action.comment.dislikes
 
       return {...state}
     default:

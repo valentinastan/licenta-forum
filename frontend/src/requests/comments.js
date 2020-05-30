@@ -11,3 +11,15 @@ export async function getCommentsRequest(params) {
 
   return comments.data
 }
+
+export async function likeCommentQuery(params) {
+  let comment = await post(`api/comment/${params.commentId}/like`)
+
+  return comment.data
+}
+
+export async function dislikeCommentQuery(params) {
+  let comment = await post(`api/comment/${params.commentId}/dislike`)
+
+  return comment.data
+}
